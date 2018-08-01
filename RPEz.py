@@ -172,7 +172,7 @@ def calculateWeightPerSide(roundedWorkingWeight) -> float:
     return ((roundedWorkingWeight - 45) / 2)
 
 
-def findWeightsToLoad(sideWeight, listOfWeights) -> list:
+def findWeightsToLoad(sideWeight, listOfWeights):
     '''
     Adds the weights needed to be added onto each side of the bar and adds
     the weight numbers into a list.
@@ -180,7 +180,7 @@ def findWeightsToLoad(sideWeight, listOfWeights) -> list:
     if sideWeight == 0:
         listOfWeights.reverse()
         listOfWeights.append(0)
-        return listOfWeights
+        return
     elif sideWeight - 45 >= 0:
         listOfWeights.append(45)
         findWeightsToLoad(sideWeight - 45, listOfWeights)
